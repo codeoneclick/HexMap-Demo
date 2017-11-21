@@ -1,0 +1,4 @@
+[submodule "Plugins/HexMapExtension"]
+	path = Plugins/HexMapExtension
+	url = https://github.com/codeoneclick/HexMap-Plugin.git
+	branch = develop
