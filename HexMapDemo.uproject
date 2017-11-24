@@ -7,7 +7,14 @@
 		{
 			"Name": "HexMapDemo",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine",
+				"CoreUObject",
+				"AIModule",
+				"HexMap",
+				"UMG"
+			]
 		}
 	],
 	"Plugins": [

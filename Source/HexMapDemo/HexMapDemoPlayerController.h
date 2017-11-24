@@ -19,6 +19,7 @@ protected:
 	uint32 bMoveToMouseCursor : 1;
 
 	// Begin PlayerController interface
+	virtual void BeginPlay() override;
 	virtual void PlayerTick(float DeltaTime) override;
 	virtual void SetupInputComponent() override;
 	// End PlayerController interface
