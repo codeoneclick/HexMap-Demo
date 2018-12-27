@@ -1,7 +1,6 @@
 // Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
 
 #include "HexMapDemoPlayerController.h"
-#include "AI/Navigation/NavigationSystem.h"
 #include "Runtime/Engine/Classes/Components/DecalComponent.h"
 #include "HeadMountedDisplayFunctionLibrary.h"
 #include "HexMapDemoCharacter.h"
@@ -139,10 +138,8 @@ void AHexMapDemoPlayerController::SetNewMoveDestination(const FVector DestLocati
 	APawn* const Pawn = GetPawn();
 	if (Pawn)
 	{
-		//UNavigationSystem* const NavSys = GetWorld()->GetNavigationSystem();
 		float const Distance = FVector::Dist(DestLocation, Pawn->GetActorLocation());
 		UHMActorNavigationComponent* NavigationComponent = Pawn->FindComponentByClass<UHMActorNavigationComponent>();
-		// We need to issue move command only if far enough in order for walk animation to play correctly
 		if (NavigationComponent && (Distance > 120.0f))
 		{
 			UPathFollowingComponent* PathFollowingComponent = FindComponentByClass<UPathFollowingComponent>();
